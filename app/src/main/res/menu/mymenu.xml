@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/profilFragment"
+        android:title="PROFİL"
+        />
+    <item
+        android:id="@+id/favorilerFragment"
+        android:title="FAVORİ" />
+    <item
+        android:id="@+id/kesfetFragment"
+        android:title="KEŞFET" />
+    <item
+        android:id="@+id/tariflerFragment"
+        android:title="TARİFE" />
+    <item
+        android:id="@+id/istekveOneriFragment"
+        android:title="İSTEK ve ÖNERİ." />
+</menu>
