@@ -3,18 +3,104 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/profil_arkaplan_tema"
     tools:context=".ProfilFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="236dp"
-        android:layout_height="137dp"
+    <LinearLayout
+        android:layout_width="220dp"
+        android:layout_height="220dp"
         android:layout_alignParentStart="true"
+        android:background="@drawable/chef_backround_shape"
+        android:gravity="center"
+        android:layout_marginTop="110dp"
+        android:layout_marginStart="85dp"
+        android:layout_alignParentTop="true">
+        <ImageView
+            android:layout_width="190dp"
+            android:layout_height="190dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/profil_chef_page" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="60dp"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="77dp"
-        android:layout_marginTop="269dp"
-        android:text="PROFİLL"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="390dp"
+        android:background="@drawable/giristext">
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:gravity="start"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="60dp"
+            android:hint="Kullanici Adı"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="-250dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/person" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="480dp"
+
+        android:background="@drawable/giristext">
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:gravity="start"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="60dp"
+            android:hint="Şifrem"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="-250dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/pasword" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="560dp"
+        android:background="@drawable/giristext">
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:gravity="start"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="60dp"
+            android:hint="Email"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="-250dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/email" />
+
+    </LinearLayout>
+
 
 </RelativeLayout>

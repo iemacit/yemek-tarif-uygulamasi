@@ -43,12 +43,18 @@ public class MainActivity222 extends AppCompatActivity implements SearchView.OnQ
         ActionBarDrawerToggle toggle=
                 new ActionBarDrawerToggle(this,drawer,toolbar,0,0);
         drawer.addDrawerListener(toggle);
+        setSupportActionBar(toolbar);
         toolbar.setTitle("TARİFEM");
+        drawer.post(new Runnable() {
+            @Override
+            public void run() {
+                toggle.syncState();
+            }
+        });
 
-       setSupportActionBar(toolbar);
 
         View baslik=navim.inflateHeaderView(R.layout.drawer_baslik);
-        toggle.syncState();
+
     }
 
     @Override

@@ -63,7 +63,7 @@ public class KayitEkrani extends AppCompatActivity {
                                         mData.put("Kullanici Sifre",kullaniciSifre);
                                         mData.put("Kullanici Email",kullaniciEmail);
                                         mData.put("Kullanici ID",mUser.getUid());
-                                        mFstore.collection("kullanicilar").document("Person")
+                                        mFstore.collection("kullanicilar").document(FirebaseAuth.getInstance().getUid())
                                                 .set(mData)
                                                 .addOnCompleteListener(KayitEkrani.this, new OnCompleteListener<Void>() {
                                                     @Override
