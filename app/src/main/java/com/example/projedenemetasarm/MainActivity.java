@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //XML verilerinin çekilmesi
         layout = findViewById(R.id.ly);
         mAuth = FirebaseAuth.getInstance();
         textKayit = findViewById(R.id.tiklaKayit);
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         txtSifre = findViewById(R.id.sifre);
         giris = findViewById(R.id.giris);
         signIn();
+        //kayıt alanına yönelme alanı
         textKayit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,7 +56,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+        //firebase giriş yapmaya çalışmak için gerkli kontollerin yapıldığı alan
         public void girisYap(){
+            //veriler EditTexten çekiliyor
             eMail=txtEmail.getText().toString();
             sifre=txtSifre.getText().toString();
 
@@ -71,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                         }).addOnFailureListener(this, new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "Kayıtlı Kullanıcı Bulunamadı", Toast.LENGTH_SHORT).show();
                             }
                         });
             }else

@@ -47,6 +47,8 @@
             android:layout_marginStart="3dp"
             android:hint="@string/ad"
             android:textStyle="bold"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
             android:textSize="16dp"/>
     </LinearLayout>
     <LinearLayout
@@ -70,6 +72,8 @@
             android:layout_marginStart="3dp"
             android:textStyle="bold"
             android:textSize="15dp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
             android:inputType="textPassword"
             android:hint="@string/sifre"/>
     </LinearLayout>
@@ -96,6 +100,8 @@
             android:layout_marginStart="3dp"
             android:textStyle="bold"
             android:textSize="16sp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
             android:inputType="textEmailAddress"
             android:hint="@string/email"/>
     </LinearLayout>

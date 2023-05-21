@@ -44,6 +44,7 @@ public class TariflerFragment extends Fragment implements RexyclerViewInterface{
 
     @Override
     public void itemOnclick(int position) {
+        //recyClearviewde ekranda olan verilerin Ayrıntılı actıvty classına gönderilmesi
         Intent intent=new Intent(getActivity(),AyrintiliActivity.class);
         intent.putExtra("resim",listem.get(position).getYemekGorseli());
         intent.putExtra("yemekadi",listem.get(position).getYemekAdi());

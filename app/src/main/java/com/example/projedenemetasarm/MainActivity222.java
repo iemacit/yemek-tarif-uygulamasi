@@ -33,9 +33,11 @@ public class MainActivity222 extends AppCompatActivity implements SearchView.OnQ
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main222);
+        //XML verilerinin çekilmesi
         navim=findViewById(R.id.navigationView);
         toolbar=findViewById(R.id.toolbar);
         drawer=findViewById(R.id.drawer);
+        //Navigation ve Toolbar drawer bağlantısının yapıldığı alan
         NavHostFragment navHostFragment=
                 (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.hostFragment);
         NavigationUI.setupWithNavController(navim,navHostFragment.getNavController());
@@ -52,13 +54,14 @@ public class MainActivity222 extends AppCompatActivity implements SearchView.OnQ
             }
         });
 
-
+        //tasarlanan xml drawer başlangıç menunun bağlanması
         View baslik=navim.inflateHeaderView(R.layout.drawer_baslik);
 
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        //toolbara searchview in bağlanması
         getMenuInflater().inflate(R.menu.toolbar_menu,menu);
         MenuItem item=menu.findItem(R.id.search);
         SearchView searchView=(SearchView) item.getActionView();
@@ -83,6 +86,7 @@ public class MainActivity222 extends AppCompatActivity implements SearchView.OnQ
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
+            //Üç noktaya basıp çıkmak istediği zaman çıkış butonunun çalışması
             case R.id.ayarlar:
                 Intent inttr=new Intent(MainActivity222.this,MainActivity.class);
                 finish();
@@ -95,8 +99,10 @@ public class MainActivity222 extends AppCompatActivity implements SearchView.OnQ
     public void onBackPressed() {
         if(drawer.isDrawerOpen(GravityCompat.START)){
             drawer.closeDrawer(GravityCompat.START);
+
         }else{
             super.onBackPressed();
+
         }
 
     }

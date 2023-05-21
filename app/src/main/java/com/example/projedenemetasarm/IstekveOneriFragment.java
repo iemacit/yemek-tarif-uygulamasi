@@ -26,6 +26,8 @@ public class IstekveOneriFragment extends Fragment {
         istek_yonlendirme=tasarim.findViewById(R.id.istek_bilgi);
         telefon_yonlendirme=tasarim.findViewById(R.id.iletişim);
 
+        //kod çalışmıyor
+        /*
         telefon_yonlendirme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -33,12 +35,13 @@ public class IstekveOneriFragment extends Fragment {
                 callIntent.setData(Uri.parse("tel"+telefon_yonlendirme.getText().toString()));
                 startActivity(callIntent);
             }
-        });
+        });*/
+        //kullaniciların meal adresine yönlendirilmesi
         istek_yonlendirme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_SENDTO);
-                String uriText = "mailto:" + Uri.encode("info@seekmyvision.in") + "?subject=" +
+                String uriText = "mailto:" + Uri.encode("yakuphan.isik@gmail.com") + "?subject=" +
                         Uri.encode("your email id ") + "&body=" + Uri.encode("");
 
                 Uri uri = Uri.parse(uriText);
