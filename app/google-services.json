@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "776895098458",
-    "project_id": "projem-18e9a",
-    "storage_bucket": "projem-18e9a.appspot.com"
+    "project_number": "493789264033",
+    "project_id": "yemek-tarif-uygulamasi",
+    "storage_bucket": "yemek-tarif-uygulamasi.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:776895098458:android:97c674b0036f1cbd7db263",
+        "mobilesdk_app_id": "1:493789264033:android:83e814a4ca123c3b0c58e0",
         "android_client_info": {
           "package_name": "com.example.projedenemetasar"
         }
       },
       "oauth_client": [
         {
-          "client_id": "776895098458-6ehm7j8ij9g5jel1q9ksn64lpprm8c33.apps.googleusercontent.com",
+          "client_id": "493789264033-7g65mbdosv9ccj7pgq6vp9g8khpqs0po.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDEbVTplB1atEokgQNdlKQOwU4Du8RJl5o"
+          "current_key": "AIzaSyCuDuWl2Nw3J_8IFD-77NFaQi_DHV3RMWU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "776895098458-6ehm7j8ij9g5jel1q9ksn64lpprm8c33.apps.googleusercontent.com",
+              "client_id": "493789264033-7g65mbdosv9ccj7pgq6vp9g8khpqs0po.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

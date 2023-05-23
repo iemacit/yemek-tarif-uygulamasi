@@ -43,7 +43,7 @@ public class IstekveOneriFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_SENDTO);
-                String uriText = "mailto:" + Uri.encode("yakuphan.isik@gmail.com") + "?subject=" +
+                String uriText = "mailto:" + Uri.encode("yummy1.yummyy@gmail.com") + "?subject=" +
                         Uri.encode("your email id ") + "&body=" + Uri.encode("");
 
                 Uri uri = Uri.parse(uriText);
