@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.example.projedenemetasarm.R;
 
 public class AyrintiliActivity extends AppCompatActivity {
+    //Yakup Deneme
     ImageView resim;
     TextView yemekadi,yapan,yemekSuresi,kisiSayisi;
     @SuppressLint("MissingInflatedId")
