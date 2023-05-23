@@ -7,103 +7,104 @@
     tools:context=".Fragment.ProfilFragment">
 
     <LinearLayout
-        android:layout_width="220dp"
-        android:layout_height="220dp"
-        android:layout_alignParentStart="true"
-        android:background="@drawable/chef_backround_shape"
-        android:gravity="center"
-        android:layout_marginTop="110dp"
-        android:layout_marginStart="85dp"
-        android:layout_alignParentTop="true">
-        <ImageView
-            android:layout_width="190dp"
-            android:layout_height="190dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:background="@drawable/profil_chef_page" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="280dp"
-        android:layout_height="60dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="390dp"
-        android:background="@drawable/giristext">
-        <TextView
-            android:id="@+id/profilName"
-            android:layout_width="200dp"
-            android:layout_height="40dp"
-            android:gravity="start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:background="@drawable/chef_backround_shape"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="190dp"
+                android:layout_height="190dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/profil_chef_page" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/giristext">
+
+            <TextView
+                android:id="@+id/profilName"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:hint="Kullanici Adı"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="-250dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/person" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="280dp"
+            android:layout_height="60dp"
             android:layout_marginTop="10dp"
-            android:layout_marginStart="60dp"
-            android:hint="Kullanici Adı"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"/>
-        <ImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="-250dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/person" />
+            android:background="@drawable/giristext">
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="280dp"
-        android:layout_height="60dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="480dp"
+            <TextView
+                android:id="@+id/profilSifre"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:hint="Şifrem"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
-        android:background="@drawable/giristext">
-        <TextView
-            android:id="@+id/profilSifre"
-            android:layout_width="200dp"
-            android:layout_height="40dp"
-            android:gravity="start"
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="-250dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/pasword" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="280dp"
+            android:layout_height="60dp"
             android:layout_marginTop="10dp"
-            android:layout_marginStart="60dp"
-            android:hint="Şifrem"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"/>
-        <ImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="-250dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/pasword" />
+            android:background="@drawable/giristext">
+            <TextView
+                android:id="@+id/profilEmail"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:hint="Email"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="-250dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/email" />
+
+        </LinearLayout>
 
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="280dp"
-        android:layout_height="60dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="560dp"
-        android:background="@drawable/giristext">
-        <TextView
-            android:id="@+id/profilEmail"
-            android:layout_width="200dp"
-            android:layout_height="40dp"
-            android:gravity="start"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="60dp"
-            android:hint="Email"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"/>
-        <ImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="-250dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/email" />
-
-    </LinearLayout>
-
 
 </RelativeLayout>

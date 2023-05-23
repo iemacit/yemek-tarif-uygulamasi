@@ -12,6 +12,9 @@
         android:theme="@style/Theme.ProjeDenemeTasarım"
         tools:targetApi="31">
         <activity
+            android:name=".FireBase.FirebaseDeneme"
+            android:exported="false" />
+        <activity
             android:name=".Activty.AyrintiliActivity"
             android:exported="false" />
         <activity

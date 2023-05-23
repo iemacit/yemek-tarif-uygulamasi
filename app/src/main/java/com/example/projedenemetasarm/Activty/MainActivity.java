@@ -20,6 +20,10 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     String eMail;
@@ -30,8 +34,6 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private RelativeLayout layout;
     private FirebaseUser mUser;
-
-
 
     @SuppressLint("MissingInflatedId")
     @Override
