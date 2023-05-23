@@ -4,7 +4,7 @@
     android:id="@+id/yemekRecyListem"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TariflerFragment">
+    tools:context=".Fragment.TariflerFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/yemekReyclist"

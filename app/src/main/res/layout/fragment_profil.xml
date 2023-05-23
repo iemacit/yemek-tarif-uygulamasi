@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/profil_arkaplan_tema"
-    tools:context=".ProfilFragment">
+    tools:context=".Fragment.ProfilFragment">
 
     <LinearLayout
         android:layout_width="220dp"
@@ -31,6 +31,7 @@
         android:layout_marginTop="390dp"
         android:background="@drawable/giristext">
         <TextView
+            android:id="@+id/profilName"
             android:layout_width="200dp"
             android:layout_height="40dp"
             android:gravity="start"
@@ -58,6 +59,7 @@
 
         android:background="@drawable/giristext">
         <TextView
+            android:id="@+id/profilSifre"
             android:layout_width="200dp"
             android:layout_height="40dp"
             android:gravity="start"
@@ -84,6 +86,7 @@
         android:layout_marginTop="560dp"
         android:background="@drawable/giristext">
         <TextView
+            android:id="@+id/profilEmail"
             android:layout_width="200dp"
             android:layout_height="40dp"
             android:gravity="start"

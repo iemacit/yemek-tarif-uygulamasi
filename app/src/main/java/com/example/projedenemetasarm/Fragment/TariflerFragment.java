@@ -1,4 +1,4 @@
-package com.example.projedenemetasarm;
+package com.example.projedenemetasarm.Fragment;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -12,10 +12,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.projedenemetasarm.Activty.AyrintiliActivity;
+import com.example.projedenemetasarm.R;
+import com.example.projedenemetasarm.RecylerViewAdaptor;
+import com.example.projedenemetasarm.RexyclerViewInterface;
+import com.example.projedenemetasarm.YemekListesi;
+
 import java.util.ArrayList;
 
 
-public class KesfetFragment extends Fragment implements RexyclerViewInterface{
+public class TariflerFragment extends Fragment implements RexyclerViewInterface {
     private RecyclerView myres;
     private ArrayList<YemekListesi> listem;
     private RecylerViewAdaptor myreycAdaptor;
@@ -24,8 +30,8 @@ public class KesfetFragment extends Fragment implements RexyclerViewInterface{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View tasarim=inflater.inflate(R.layout.fragment_kesfet, container, false);
-        myres=tasarim.findViewById(R.id.recyclerViewTasarim);
+        View tasarim=inflater.inflate(R.layout.fragment_tarifler, container, false);
+        myres=tasarim.findViewById(R.id.yemekReyclist);
         listem=new ArrayList<>();
         myreycAdaptor=new RecylerViewAdaptor(listem,this);
         myres.setAdapter(myreycAdaptor);
@@ -44,7 +50,8 @@ public class KesfetFragment extends Fragment implements RexyclerViewInterface{
 
     @Override
     public void itemOnclick(int position) {
-        Intent intent=new Intent(getActivity(),AyrintiliActivity.class);
+        //recyClearviewde ekranda olan verilerin Ayrıntılı actıvty classına gönderilmesi
+        Intent intent=new Intent(getActivity(), AyrintiliActivity.class);
         intent.putExtra("resim",listem.get(position).getYemekGorseli());
         intent.putExtra("yemekadi",listem.get(position).getYemekAdi());
         intent.putExtra("yemekyazar",listem.get(position).getYemekPaylasan());

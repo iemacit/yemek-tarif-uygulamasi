@@ -7,7 +7,7 @@
     tools:openDrawer="start"
     android:layout_height="match_parent"
 
-    tools:context=".MainActivity222" >
+    tools:context=".Activty.MainActivity222" >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -19,6 +19,7 @@
             android:layout_height="60dp"
             android:background="#9A0303"
             android:minHeight="?attr/actionBarSize"
+
             android:theme="?attr/actionBarTheme" />
 
         <androidx.fragment.app.FragmentContainerView
@@ -37,5 +38,8 @@
         android:layout_width="250dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:menu="@menu/mymenu" />
+        app:menu="@menu/mymenu"
+        app:itemRippleColor="@color/black"
+        />
+
 </androidx.drawerlayout.widget.DrawerLayout>

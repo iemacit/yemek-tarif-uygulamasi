@@ -1,4 +1,4 @@
-package com.example.projedenemetasarm;
+package com.example.projedenemetasarm.Activty;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.projedenemetasarm.R;
 
 public class AyrintiliActivity extends AppCompatActivity {
     ImageView resim;

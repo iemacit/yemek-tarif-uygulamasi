@@ -1,4 +1,4 @@
-package com.example.projedenemetasarm;
+package com.example.projedenemetasarm.Activty;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Layout;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +14,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.projedenemetasarm.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
@@ -69,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onSuccess(AuthResult authResult) {
                                 mUser=mAuth.getCurrentUser();
                                 Intent intent=new Intent(MainActivity.this,MainActivity222.class);
+                                intent.putExtra("email",eMail);
+                                intent.putExtra("sifresi",sifre);
                                 finish();
                                 startActivity(intent);
                             }

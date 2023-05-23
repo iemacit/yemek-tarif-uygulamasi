@@ -1,4 +1,4 @@
-package com.example.projedenemetasarm;
+package com.example.projedenemetasarm.Activty;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -11,20 +11,23 @@ import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
 
 import android.annotation.SuppressLint;
-import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.projedenemetasarm.R;
 import com.google.android.material.navigation.NavigationView;
 
 
 public class MainActivity222 extends AppCompatActivity implements SearchView.OnQueryTextListener {
+
     private NavigationView navim;
     private DrawerLayout drawer;
     private Toolbar toolbar;
+    public static String gelenEmail;
+    public static String gelenSifre;
 
 
 
@@ -45,17 +48,31 @@ public class MainActivity222 extends AppCompatActivity implements SearchView.OnQ
         ActionBarDrawerToggle toggle=
                 new ActionBarDrawerToggle(this,drawer,toolbar,0,0);
         drawer.addDrawerListener(toggle);
-        setSupportActionBar(toolbar);
-        toolbar.setTitle("TARİFEM");
-        drawer.post(new Runnable() {
+        toggle.setDrawerIndicatorEnabled(true);
+
+// ActionBarDrawerToggle ile ilgili işlemleri yönlendir
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                toggle.syncState();
+            public void onClick(View v) {
+                if (drawer.isDrawerOpen(GravityCompat.START)) {
+                    drawer.closeDrawer(GravityCompat.START);
+                } else {
+                    drawer.openDrawer(GravityCompat.START);
+                }
             }
         });
 
+// ActionBarDrawerToggle'ın durumunu senkronize et
+        toggle.syncState();
+        setSupportActionBar(toolbar);
+
+
+
         //tasarlanan xml drawer başlangıç menunun bağlanması
         View baslik=navim.inflateHeaderView(R.layout.drawer_baslik);
+
+       gelenEmail=getIntent().getStringExtra("email");
+       gelenSifre=getIntent().getStringExtra("sifresi");
 
     }
 
@@ -104,6 +121,7 @@ public class MainActivity222 extends AppCompatActivity implements SearchView.OnQ
             super.onBackPressed();
 
         }
-
     }
+
+
 }

@@ -6,27 +6,27 @@
     app:startDestination="@id/profilFragment">
     <fragment
         android:id="@+id/profilFragment"
-        android:name="com.example.projedenemetasarm.ProfilFragment"
+        android:name="com.example.projedenemetasarm.Fragment.ProfilFragment"
         android:label="fragment_profil"
         tools:layout="@layout/fragment_profil" />
     <fragment
         android:id="@+id/favorilerFragment"
-        android:name="com.example.projedenemetasarm.FavorilerFragment"
+        android:name="com.example.projedenemetasarm.Fragment.FavorilerFragment"
         android:label="fragment_favoriler"
         tools:layout="@layout/fragment_favoriler" />
     <fragment
         android:id="@+id/kesfetFragment"
-        android:name="com.example.projedenemetasarm.KesfetFragment"
+        android:name="com.example.projedenemetasarm.Fragment.KesfetFragment"
         android:label="fragment_kesfet"
         tools:layout="@layout/fragment_kesfet" />
     <fragment
         android:id="@+id/tariflerFragment"
-        android:name="com.example.projedenemetasarm.TariflerFragment"
+        android:name="com.example.projedenemetasarm.Fragment.TariflerFragment"
         android:label="fragment_tarifler"
         tools:layout="@layout/fragment_tarifler" />
     <fragment
         android:id="@+id/istekveOneriFragment"
-        android:name="com.example.projedenemetasarm.IstekveOneriFragment"
+        android:name="com.example.projedenemetasarm.Fragment.IstekveOneriFragment"
         android:label="fragment_istekve_oneri"
         tools:layout="@layout/fragment_istekve_oneri" />
 </navigation>

@@ -3,17 +3,22 @@
     <item
         android:id="@+id/profilFragment"
         android:title="PROFİL"
+        android:icon="@drawable/baseline_people_alt_24"
         />
     <item
         android:id="@+id/favorilerFragment"
+        android:icon="@drawable/favorite_icon"
         android:title="FAVORİ" />
     <item
         android:id="@+id/kesfetFragment"
+        android:icon="@drawable/kesfet_icon"
         android:title="KEŞFET" />
     <item
         android:id="@+id/tariflerFragment"
+        android:icon="@drawable/tariflistesi_icon"
         android:title="TARİFE" />
     <item
         android:id="@+id/istekveOneriFragment"
+        android:icon="@drawable/baseline_mark_email_read_24"
         android:title="İSTEK ve ÖNERİ." />
 </menu>
