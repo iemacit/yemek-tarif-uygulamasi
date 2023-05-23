@@ -1,79 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:background="#FFFB0C"
     tools:context=".Fragment.IstekveOneriFragment">
 
     <LinearLayout
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="58dp" >
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/amblemm" />
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/amblemm" />
+        </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="280dp"
-        android:layout_height="220dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="59dp"
-        android:layout_marginBottom="145dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/istek_bilgi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="60dp"
+                android:layout_marginLeft="60dp"
+                android:background="@drawable/istek_tema"
+                android:gravity="center"
+                android:hint="Sizde istediğiniz tarifleri bizimle paylaşarak bize destek olabilirsiniz.Ekrana tıklayarak email üzerinde iletişime geçerek tariflerinizi atabilirsiniz.Lütfen tarifi ayrıntılı bir şekilde ,kişi sayısına ve yapılış süresine dikkat ederek gönderiniz. "
+                android:padding="15dp"
+                android:textColorHint="@color/white"
+                android:textSize="15.5sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/istek_bilgi"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/istek_tema"
-            android:padding="15dp"
-            android:textColorHint="@color/white"
-            android:gravity="center"
-            android:hint="Sizde istediğiniz tarifleri bizimle paylaşarak bize destek olabilirsiniz.Ekrana tıklayarak email üzerinde iletişime geçerek tariflerinizi atabilirsiniz.Lütfen tarifi ayrıntılı bir şekilde ,kişi sayısına ve yapılış süresine dikkat ederek gönderiniz. "
-            android:textSize="15.5sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="280dp"
-        android:layout_height="60dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="59dp"
-        android:background="@drawable/istek_tema"
-        android:layout_marginBottom="27dp">
-
-        <TextView
-            android:id="@+id/iletişim"
-            android:layout_width="230dp"
+        <LinearLayout
+            android:layout_width="300dp"
             android:layout_height="60dp"
-            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
             android:gravity="center"
-            android:padding="10dp"
-            android:text="0555 555 55555"
-            android:textColorHint="@color/white"
-            android:textSize="28sp"
-            android:textColor="@color/white"
-            android:textStyle="italic" />
+            android:background="@drawable/istek_tema">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/phone" />
+            <TextView
+                android:id="@+id/iletişim"
+                android:layout_width="230dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="0555 555 55555"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="28sp"
+                android:textStyle="italic" />
+        </LinearLayout>
 
-        <ImageView
-
-            android:layout_width="47dp"
-            android:layout_height="47dp"
-            android:layout_marginTop="6dp"
-            android:layout_marginStart="-270dp"
-            android:background="@drawable/phone" />
     </LinearLayout>
-
-
-
 
 </RelativeLayout>
