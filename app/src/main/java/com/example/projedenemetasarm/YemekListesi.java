@@ -3,16 +3,26 @@ package com.example.projedenemetasarm;
 public class YemekListesi {
     private String yemekAdi;
     private String yemekPaylasan;
-    private int yemekGorseli;
+    private String yemekGorseli;
     private String yemekSuresi;
     private String kisiSayisi;
+    private String yemekAciklama;
 
-    public YemekListesi(String yemekAdi, String yemekPaylasan, int yemekGorseli,String yemekSuresi,String kisiSayisi) {
+    public YemekListesi(String yemekAdi, String yemekPaylasan, String yemekGorseli,String yemekSuresi,String kisiSayisi,String yemekAciklama) {
         this.yemekAdi = yemekAdi;
+        this.yemekAciklama=yemekAciklama;
         this.yemekPaylasan = yemekPaylasan;
         this.yemekGorseli = yemekGorseli;
         this.kisiSayisi=kisiSayisi;
         this.yemekSuresi=yemekSuresi;
+    }
+
+    public String getYemekAciklama() {
+        return yemekAciklama;
+    }
+
+    public void setYemekAciklama(String yemekAciklama) {
+        this.yemekAciklama = yemekAciklama;
     }
 
     public String getYemekAdi() {
@@ -31,11 +41,11 @@ public class YemekListesi {
         this.yemekPaylasan = yemekPaylasan;
     }
 
-    public int getYemekGorseli() {
+    public String getYemekGorseli() {
         return yemekGorseli;
     }
 
-    public void setYemekGorseli(int yemekGorseli) {
+    public void setYemekGorseli(String yemekGorseli) {
         this.yemekGorseli = yemekGorseli;
     }
 

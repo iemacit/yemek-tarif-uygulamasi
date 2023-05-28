@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
 public class RecylerViewAdaptor extends RecyclerView.Adapter<RecylerViewAdaptor.Myholder>{
@@ -32,7 +34,20 @@ public class RecylerViewAdaptor extends RecyclerView.Adapter<RecylerViewAdaptor.
     public void onBindViewHolder(@NonNull Myholder holder, int position) {
         holder.yemekadi.setText(yemeklerim.get(position).getYemekAdi());
         holder.sunan.setText(yemeklerim.get(position).getYemekPaylasan());
-        holder.resmi.setImageResource(yemeklerim.get(position).getYemekGorseli());
+
+        // Diğer verilerin görüntülenmesi...
+
+        // Yemek görselini ImageView'e yükleme
+        String resimUrl = yemeklerim.get(position).getYemekGorseli();
+        if (resimUrl != null && !resimUrl.isEmpty()) {
+            // Resim URL'sini ImageView'e yükleme
+            Glide.with(holder.itemView.getContext())
+                    .load(resimUrl)
+                    .into(holder.resmi);
+        } else {
+            // Varsayılan resim gösterme veya hata durumuyla başa çıkma
+        }
+
         holder.kisiSayisi.setText(yemeklerim.get(position).getKisiSayisi());
         holder.yemekSuresi.setText(yemeklerim.get(position).getYemekSuresi());
 

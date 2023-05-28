@@ -41,11 +41,12 @@ public class KesfetFragment extends Fragment implements RexyclerViewInterface {
         return tasarim;
     }
     private void diziolustur() {
-        listem.add(new YemekListesi("PASALİNA","TOGG",R.drawable.amblemm,"5 DK","4 kisi"));
+       /* listem.add(new YemekListesi("PASALİNA","TOGG",R.drawable.amblemm,"5 DK","4 kisi"));
         listem.add(new YemekListesi("PİZZA","MAHMUT",R.drawable.patates,"110 DK","24 kisi"));
         listem.add(new YemekListesi("PASTA","FATMA",R.drawable.pasta,"25 DK","2 kisi"));
         listem.add(new YemekListesi("PASALİNA","TOGG",R.drawable.amblemm,"55 DK","4 kisi"));
         listem.add(new YemekListesi("PASALİNA","TOGG",R.drawable.amblemm,"5 DK","4 kisi"));
+   */
     }
 
     @Override
