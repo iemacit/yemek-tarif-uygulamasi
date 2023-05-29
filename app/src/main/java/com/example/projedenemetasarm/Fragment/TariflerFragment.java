@@ -20,7 +20,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.SearchView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.CustomTarget;
@@ -37,6 +40,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
@@ -57,6 +61,7 @@ public class TariflerFragment extends Fragment implements RexyclerViewInterface 
     private RecylerViewAdaptor myreycAdaptor;;
     private FirebaseFirestore mFirestore=FirebaseFirestore.getInstance();
     List<YemekListesi> wordList = new ArrayList<>();
+    private SearchView searchView;
 
 
     @SuppressLint("MissingInflatedId")
@@ -66,14 +71,38 @@ public class TariflerFragment extends Fragment implements RexyclerViewInterface 
         View tasarim = inflater.inflate(R.layout.fragment_tarifler, container, false);
 
         myres = tasarim.findViewById(R.id.yemekReyclist);
+        searchView = tasarim.findViewById(R.id.searchTarifler);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                ArrayList<YemekListesi> filteredList = new ArrayList<>();
+                for (YemekListesi list : listem) {
+                    if (list.getYemekAdi().toLowerCase().contains(s.toLowerCase())) {
+                        filteredList.add(list);
+                    }
+                }
+                if (filteredList.isEmpty()) {
+
+                } else {
+                    myreycAdaptor.setFilterList(filteredList);
+                }
+                return true;
+            }
+        });
+
+
         listem = new ArrayList<>();
         myreycAdaptor = new RecylerViewAdaptor(listem, this);
         myres.setAdapter(myreycAdaptor);
         myres.setLayoutManager(new LinearLayoutManager(getActivity()));
-        diziolustur();
         eventChangeListener();
         myreycAdaptor.notifyDataSetChanged();
-
 
         return tasarim;
 
@@ -123,21 +152,6 @@ public class TariflerFragment extends Fragment implements RexyclerViewInterface 
             }
         });
     }
-
-
-
-
-    private void diziolustur() {
-
-        /*listem.add(new YemekListesi("PASALİNA","TOGG",R.drawable.amblemm,"5 DK","4 kisi"));
-        listem.add(new YemekListesi("PİZZA","MAHMUT",R.drawable.patates,"110 DK","24 kisi"));
-        listem.add(new YemekListesi("PASTA","FATMA",R.drawable.pasta,"25 DK","2 kisi"));
-        listem.add(new YemekListesi("PASALİNA","TOGG",R.drawable.amblemm,"55 DK","4 kisi"));
-        listem.add(new YemekListesi("PASALİNA","TOGG",R.drawable.amblemm,"5 DK","4 kisi"));
-    */
-    }
-
-
     @Override
     public void itemOnclick(int position) {
         //recyClearviewde ekranda olan verilerin Ayrıntılı actıvty classına gönderilmesi
