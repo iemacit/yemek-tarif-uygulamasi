@@ -20,24 +20,25 @@
                 android:id="@+id/yemekadi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
+                android:layout_marginTop="30dp"
                 android:gravity="center"
                 android:text="TextView"
                 android:textColor="@color/white"
-                android:textSize="25sp"
+                android:textSize="35sp"
                 android:textStyle="bold" />
 
             <LinearLayout
-                android:layout_width="275dp"
-                android:layout_height="275dp"
-
-                android:background="@drawable/logo"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/yemek_backround"
                 android:gravity="center">
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="250dp"
-                    android:layout_height="250dp" />
+                    android:layout_width="280dp"
+                    android:layout_gravity="center"
+                    android:layout_height="180dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -113,7 +114,7 @@
                 android:gravity="start"
                 android:text="Patates aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaay7b7ubjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjaaaaa"
                 android:textColor="@color/white"
-                android:textSize="17dp"
+                android:textSize="20dp"
                 android:textStyle="bold" />
 
         </LinearLayout>
