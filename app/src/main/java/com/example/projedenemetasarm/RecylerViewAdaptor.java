@@ -12,11 +12,19 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class RecylerViewAdaptor extends RecyclerView.Adapter<RecylerViewAdaptor.Myholder>{
 
     private ArrayList<YemekListesi> yemeklerim;
     private final RexyclerViewInterface rexyclerViewInterface;
+
+    public void setFilterList(ArrayList<YemekListesi> list) {
+        this.yemeklerim = list;
+        notifyDataSetChanged();
+
+    }
+
     public RecylerViewAdaptor(ArrayList<YemekListesi> listem,RexyclerViewInterface rexyclerViewInterface) {
         this.yemeklerim=listem;
         this.rexyclerViewInterface=rexyclerViewInterface;

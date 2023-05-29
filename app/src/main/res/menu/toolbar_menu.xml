@@ -6,10 +6,4 @@
         android:id="@+id/ayarlar"
         android:title="ÇIKIŞ"
         app:showAsAction="never" />
-    <item
-        android:id="@+id/search"
-        android:icon="@drawable/arama"
-        android:title="Search"
-        app:actionViewClass="androidx.appcompat.widget.SearchView"
-        app:showAsAction="always|collapseActionView" />
 </menu>

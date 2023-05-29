@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -22,12 +23,13 @@ import com.example.projedenemetasarm.R;
 import com.google.android.material.navigation.NavigationView;
 
 
-public class MainActivity222 extends AppCompatActivity implements SearchView.OnQueryTextListener {
+public class MainActivity222 extends AppCompatActivity {
     private NavigationView navim;
     private DrawerLayout drawer;
     private Toolbar toolbar;
     public static String gelenEmail;
     public static String gelenSifre;
+    ArrayAdapter<String> arrayAdapter;
 
 
 
@@ -60,32 +62,6 @@ public class MainActivity222 extends AppCompatActivity implements SearchView.OnQ
         gelenEmail=getIntent().getStringExtra("email");
         gelenSifre=getIntent().getStringExtra("sifresi");
     }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        //toolbara searchview in bağlanması
-        if (getSupportActionBar() != null) {
-            getMenuInflater().inflate(R.menu.toolbar_menu, menu);
-            MenuItem item = menu.findItem(R.id.search);
-            SearchView searchView = (SearchView) item.getActionView();
-            searchView.setOnQueryTextListener(this);
-        }
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onQueryTextSubmit(String query) {
-        //Kelime Yazıldıkca aarama SOnucu Gelir
-        return false;
-    }
-
-    @Override
-    public boolean onQueryTextChange(String newText) {
-        //harf harf Yazıldıkcaaaa aarama SOnucu Gelir
-        return false;
-    }
-
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

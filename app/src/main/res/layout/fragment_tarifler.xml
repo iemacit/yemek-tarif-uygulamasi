@@ -6,8 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".Fragment.TariflerFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/yemekReyclist"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <SearchView
+            android:id="@+id/searchTarifler"
+            android:background="#B31212"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/yemekReyclist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
 </RelativeLayout>
