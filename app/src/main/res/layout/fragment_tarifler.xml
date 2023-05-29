@@ -13,9 +13,9 @@
 
         <SearchView
             android:id="@+id/searchTarifler"
-            android:background="#B31212"
             android:layout_width="match_parent"
-            android:layout_height="50dp" />
+            android:layout_height="50dp"
+            android:background="@color/white" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/yemekReyclist"

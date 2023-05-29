@@ -93,4 +93,12 @@ public class KayitEkrani extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent=new Intent(KayitEkrani.this,MainActivity.class);
+        finish();
+        startActivity(intent);
+        super.onBackPressed();
+    }
 }

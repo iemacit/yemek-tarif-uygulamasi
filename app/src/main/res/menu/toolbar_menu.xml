@@ -5,5 +5,5 @@
     <item
         android:id="@+id/ayarlar"
         android:title="ÇIKIŞ"
-        app:showAsAction="never" />
+        app:showAsAction="always" />
 </menu>

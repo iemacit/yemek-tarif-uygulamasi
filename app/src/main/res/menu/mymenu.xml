@@ -2,13 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/profilFragment"
-        android:title="PROFİL"
         android:icon="@drawable/baseline_people_alt_24"
-        />
+        android:title="PROFİLİM" />
     <item
         android:id="@+id/favorilerFragment"
         android:icon="@drawable/favorite_icon"
-        android:title="FAVORİ" />
+        android:title="BU AYIN POPÜLER TARİFİ" />
     <item
         android:id="@+id/kesfetFragment"
         android:icon="@drawable/kesfet_icon"
@@ -16,9 +15,9 @@
     <item
         android:id="@+id/tariflerFragment"
         android:icon="@drawable/tariflistesi_icon"
-        android:title="TARİFE" />
+        android:title="YEMEK TARİFLERİ LİSTESİ" />
     <item
         android:id="@+id/istekveOneriFragment"
         android:icon="@drawable/baseline_mark_email_read_24"
-        android:title="İSTEK ve ÖNERİ." />
+        android:title="İSTEK VE ÖNERİ " />
 </menu>

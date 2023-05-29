@@ -7,26 +7,26 @@
     <fragment
         android:id="@+id/profilFragment"
         android:name="com.example.projedenemetasarm.Fragment.ProfilFragment"
-        android:label="fragment_profil"
+        android:label="PROFİLİM"
         tools:layout="@layout/fragment_profil" />
     <fragment
         android:id="@+id/favorilerFragment"
         android:name="com.example.projedenemetasarm.Fragment.FavorilerFragment"
-        android:label="fragment_favoriler"
+        android:label="AYIN POPULER TARİFİ"
         tools:layout="@layout/fragment_favoriler" />
     <fragment
         android:id="@+id/kesfetFragment"
         android:name="com.example.projedenemetasarm.Fragment.KesfetFragment"
-        android:label="fragment_kesfet"
+        android:label="KEŞFET"
         tools:layout="@layout/fragment_kesfet" />
     <fragment
         android:id="@+id/tariflerFragment"
         android:name="com.example.projedenemetasarm.Fragment.TariflerFragment"
-        android:label="fragment_tarifler"
+        android:label="YEMEK TARİFLERİ"
         tools:layout="@layout/fragment_tarifler" />
     <fragment
         android:id="@+id/istekveOneriFragment"
         android:name="com.example.projedenemetasarm.Fragment.IstekveOneriFragment"
-        android:label="fragment_istekve_oneri"
+        android:label="İSTEK VE ÖNERİ"
         tools:layout="@layout/fragment_istekve_oneri" />
 </navigation>

@@ -42,7 +42,7 @@ public class MainActivity222 extends AppCompatActivity {
         // XML verilerinin çekilmesi
         NavigationView navim = findViewById(R.id.navigationView);
         Toolbar toolbar = findViewById(R.id.toolbar);
-        DrawerLayout drawer = findViewById(R.id.drawer);
+         drawer = findViewById(R.id.drawerr);
 
         // Navigation ve Toolbar drawer bağlantısının yapıldığı alan
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.hostFragment);
@@ -55,14 +55,17 @@ public class MainActivity222 extends AppCompatActivity {
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        getSupportActionBar().setTitle("TARİFEM"); // ActionBar başlığını ayarla
+
 
         // Tasarlanan XML drawer başlangıç menüsünün bağlanması
         View baslik = navim.inflateHeaderView(R.layout.drawer_baslik);
         gelenEmail=getIntent().getStringExtra("email");
         gelenSifre=getIntent().getStringExtra("sifresi");
     }
-
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.toolbar_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
@@ -77,13 +80,16 @@ public class MainActivity222 extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if(drawer.isDrawerOpen(GravityCompat.START)){
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-
-        }else{
-            super.onBackPressed();
-
+        } else {
+            if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+                getSupportFragmentManager().popBackStack();
+            } else {
+                super.onBackPressed();
+            }
         }
-
     }
+
+
 }
